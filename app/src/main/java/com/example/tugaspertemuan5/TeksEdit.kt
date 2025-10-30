@@ -88,3 +88,11 @@ fun FormDataDiri(modifier: Modifier
             }
         )
 
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                bottom = dimensionResource(id = R.dimen.padding_medium),
+                top = dimensionResource(
+                    id = R.dimen.padding_medium
+                )
+            ),
+
