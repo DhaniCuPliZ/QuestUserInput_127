@@ -106,4 +106,14 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .fillMaxWidth()
                 )
+                Text(
+                    text = "Jenis Kelamin :",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 3.dp)
+                        .padding(horizontal = 1.dp),
+                    textAlign = TextAlign.Left
+                )
 
