@@ -54,3 +54,15 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     val status = listOf("Janda", "Lajang", "Duda")
     val purple = Color(0xFF8A2BE2)
     val purpleDark = Color(0xFF6A1FBF)
+
+    Column(modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(84.dp)
+                .background(
+                    brush = Brush.verticalGradient(listOf(purple, purpleDark)),
+                    shape = RoundedCornerShape(bottomStart = 0.dp, bottomEnd = 0.dp)
+                ),
+            contentAlignment = Alignment.CenterStart
+        ) {
