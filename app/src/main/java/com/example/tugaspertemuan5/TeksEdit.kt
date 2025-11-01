@@ -149,3 +149,27 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         .padding(horizontal = 1.dp),
                     textAlign = TextAlign.Left
                 )
+
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp)
+                ) {
+                    status.forEach { item ->
+                        Row (
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.selectable(
+                                selected = textNikah == item,
+                                onClick = { textNikah = item }
+                            )
+                        ){
+                            RadioButton(
+                                selected = textNikah == item,
+                                onClick = { textNikah = item }
+                            )
+                            Text(item)
+                        }
+
+                    }
+                }
