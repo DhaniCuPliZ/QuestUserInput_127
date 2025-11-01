@@ -173,3 +173,51 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
 
                     }
                 }
+
+                Text(
+                    text = "Alamat :",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 3.dp)
+                        .padding(horizontal = 1.dp),
+                    textAlign = TextAlign.Left
+                )
+
+                OutlinedTextField(
+                    value = textAlamat,
+                    onValueChange = { textAlamat = it },
+                    singleLine = true,
+                    label = { Text("Alamat Lengkap") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 12.dp)
+                )
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(vertical = 12.dp),
+                    thickness = dimensionResource(id = R.dimen.divider_tipis),
+                    color = Color.DarkGray
+                )
+
+                Button(
+                    onClick = {
+                        nama = textNama
+                        jenis = textJK
+                        alamat = textAlamat
+                        nikah = textNikah
+                    },
+                    enabled = textNama.isNotEmpty() && textAlamat.isNotEmpty() && textJK.isNotEmpty() && textNikah.isNotEmpty(),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(stringResource(id = R.string.submit))
+                }
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(vertical = 12.dp),
+                    thickness = dimensionResource(id = R.dimen.divider_tipis),
+                    color = Color.DarkGray
+                )
+
+
