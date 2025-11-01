@@ -97,3 +97,13 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         .padding(horizontal = 1.dp),
                     textAlign = TextAlign.Left
                 )
+                OutlinedTextField(
+                    value = textNama,
+                    onValueChange = { textNama = it },
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.large,
+                    label = { Text("Nama Lengkap") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                )
+
