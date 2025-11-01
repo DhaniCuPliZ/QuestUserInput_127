@@ -79,4 +79,11 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             colors = CardDefaults.cardColors(containerColor = Color(0xFFF8F8F8)),
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier.fillMaxWidth()
-        )
+        ) {
+            Column(
+                modifier = Modifier
+                    .padding(20.dp)
+                    .fillMaxWidth(),
+                verticalArrangement = Arrangement.Top,
+                horizontalAlignment = Alignment.CenterHorizontally
+            )
